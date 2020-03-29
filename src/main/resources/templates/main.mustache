@@ -5,6 +5,25 @@
 <title>Main</title>
 </head>
 <body>
-	{{some}}
+	<div>
+		<form action="" method="post">
+			<input type="text" name="text" placeholder="Enter text"/>
+			<input type="text" name="tag" placeholder="Enter tag"/>
+			<button type="submit" > add</button>
+		</form>
+	</div>
+
+	<form method="post" action="filter">
+		<input type="text" name="filter"/>
+		<button type="submit"> find</button>
+	</form>
+	<div>List of Message</div>
+	{{#messages}}
+	<div>
+		<b>{{id}}</b>
+		<span>{{text}}</span>
+		<i>{{tag}}</i>
+	</div>
+	{{/messages}}
 </body>
 </html>
